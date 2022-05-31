@@ -1,0 +1,7 @@
+{
+  "recommendations": ["ms-python.python"]
+}
+
+{
+  "python.defaultInterpreterPath": "c:/python39/python.exe"
+}
