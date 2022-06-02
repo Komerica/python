@@ -129,7 +129,7 @@ std_weight(1.75, "여자")
 # 방법2) 유튜브 답안!(나도코딩)
 
 
-def std_weight(height, gender):
+def std_weight2(height, gender):
     if gender == "남자":
         return height * height * 22
     elif gender == "여자":
@@ -138,5 +138,5 @@ def std_weight(height, gender):
 
 height = 175
 gender = "남자"
-weight = round(std_weight(height/100, gender), 2)
+weight = round(std_weight2(height/100, gender), 2)
 print("키 {0}cm {1}의 표준 체중은 {2} ")
