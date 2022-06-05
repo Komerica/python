@@ -23,6 +23,7 @@ class AttackUnit(Unit):  # Ex)파이어뱃     # 자식클래스
         # 👆 이런식으로 Unit class를 상속을 해주기때문에 👇아래 코드는 필요없음!
         # self.name = name
         # self.hp = hp
+        # self.speed = speed
         self.damage = damage
 
     def attack(self, location):
