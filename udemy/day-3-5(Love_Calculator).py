@@ -1,5 +1,4 @@
 # Method1) My answer
-
 name1 = input("What is the first person's name? ")
 name2 = input("What is the second person's name? ")
 
@@ -30,14 +29,14 @@ else:
     print(f"Your score is {score}.")
 
 
-#Method2) Udemy answer
+# Method2) Udemy answer
 # 🚨 Don't change the code below 👇
 print("Welcome to the Love Calculator!")
 name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
 # 🚨 Don't change the code above 👆
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 
 combined_names = name1 + name2
 lower_names = combined_names.lower()
@@ -56,8 +55,8 @@ second_digit = l + o + v + e
 score = int(str(first_digit) + str(second_digit))
 
 if (score < 10) or (score > 90):
-  print(f"Your score is {score}, you go together like coke and mentos.")
+    print(f"Your score is {score}, you go together like coke and mentos.")
 elif (score >= 40) and (score <= 50):
-  print(f"Your score is {score}, you are alright together.")
+    print(f"Your score is {score}, you are alright together.")
 else:
-  print(f"Your score is {score}.")
+    print(f"Your score is {score}.")
