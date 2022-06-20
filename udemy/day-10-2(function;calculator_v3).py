@@ -12,7 +12,6 @@ print("""
 ██║╚██╔╝██║██╔══╝░░░░░██║░░░██╔══██║██║░░██║██║░░██║░╚═══██╗
 ██║░╚═╝░██║███████╗░░░██║░░░██║░░██║╚█████╔╝██████╔╝██████╔╝
 ╚═╝░░░░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░╚═════╝░╚═════╝░ """)
-print(logo)
 
 
 def add(a, b):
@@ -42,16 +41,17 @@ additional_calculation = True
 
 
 def calculator():
-    num1 = int(input("What's the first number?: "))
+    print(logo)
+    num1 = float(input("What's the first number?: "))
     for symbol in operations:
         print(symbol)
     while additional_calculation:
         operation = input("Pick an operation: ")
-        num2 = int(input("What's the next number?: "))
+        num2 = float(input("What's the next number?: "))
 
         function = operations[operation]
         result = function(num1, num2)
-        print(f"{num1:.1f} {operation} {num2:.1f} = {result:.1f}")
+        print(f"{num1} {operation} {num2} = {result}")
 
         should_continue = input(
             f"Type 'y' to continue calculating with {result:.1f}, or type 'n' to start a new calculation: ")
