@@ -9,6 +9,8 @@ enemies = 1
 def increase_enemies():
 
     print(f"enemies inside function: {enemies}")
+    # enemies += 1
+    # 👆 UnboundLocalError: local variable 'enemies' referenced before assignment
     return enemies + 1
 
 
