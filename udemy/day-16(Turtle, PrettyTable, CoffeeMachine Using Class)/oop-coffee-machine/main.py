@@ -2,31 +2,24 @@ from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
-menu = Menu()
-print(menu.get_items())
-print(menu.find_drink("espresso"))
-print(menu.find_drink("latte"))
-
-
 money_machine = MoneyMachine()
-print(money_machine.money_received) # 0
-print(money_machine.profit) # 0
-money_machine.report() # Money: $0
-# money_machine.process_coins() # Please insert coins.
-money_machine.make_payment(2) # Please insert coins.
-
 coffee_maker = CoffeeMaker()
-coffee_maker.report() # Water: 300ml....
-latte = menu.find_drink("latte")
-print(coffee_maker.is_resource_sufficient(latte))
-coffee_maker.make_coffee(latte)
+menu = Menu()
 
-# menu_item = MenuItem("hehe", 156, 12 ,13 ,14)
-# print(menu_item.ingredients)
-# print(menu_item.cost)
+is_on = True
 
-# coffee_maker = CoffeeMaker()
-# print(coffee_maker.make_coffee("latte"))
-
-
-
+while is_on:
+    options = menu.get_items()
+    choice = input(f"What would you like? {options}: ")
+    if choice == "off":
+        is_on = False
+    elif choice == "report":
+        coffee_maker.report()
+        money_machine.report()
+    else:
+        drink = menu.find_drink(choice)
+        print(drink)
+        is_enough_ingredients = coffee_maker.is_resource_sufficient(drink)
+        is_payment_successful = money_machine.make_payment(drink.cost)
+        if is_enough_ingredients and is_payment_successful:
+            coffee_maker.make_coffee(drink)
