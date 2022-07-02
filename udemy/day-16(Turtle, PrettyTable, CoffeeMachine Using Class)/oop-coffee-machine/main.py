@@ -32,7 +32,11 @@ while is_on:
     else:
         drink = menu.find_drink(choice)
         print(drink)
-        is_enough_ingredients = coffee_maker.is_resource_sufficient(drink)
-        is_payment_successful = money_machine.make_payment(drink.cost)
-        if is_enough_ingredients and is_payment_successful:
-            coffee_maker.make_coffee(drink)
+        # is_enough_ingredients = coffee_maker.is_resource_sufficient(drink)
+        # is_payment_successful = money_machine.make_payment(drink.cost) # 이게 실행되면서 망함!!
+        # if is_enough_ingredients and is_payment_successful:
+        #     coffee_maker.make_coffee(drink)
+        # 👆 재료가 부족해도 돈달라고 한다!
+        if coffee_maker.is_resource_sufficient(drink):
+            if money_machine.make_payment(drink.cost):
+                coffee_maker.make_coffee(drink)
