@@ -23,4 +23,10 @@ class QuizBrain:
 
     # TODO-3: Checking if we're the end of the quiz
     def still_has_questions(self):
-        return self.question_number < len(self.question_list)   # True / False return 하는 간단한 방법!
+        if self.question_number < len(self.question_list):
+            return True
+        else:
+            print(f"Your final score is {self.score}")
+            return False
+
+
