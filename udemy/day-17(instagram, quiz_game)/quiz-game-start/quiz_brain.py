@@ -19,6 +19,8 @@ class QuizBrain:
         else:
             print("That's wrong.")
         print(f"The correct answer was: {correct_answer}")
+        print(f"Your current score is: {self.score}/{self.question_number}")
+        print()
 
     # TODO-3: Checking if we're the end of the quiz
     def still_has_questions(self):
