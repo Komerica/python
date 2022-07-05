@@ -30,6 +30,4 @@ print(question_bank[0].answer)  # 이제 이렇게 접근가능!
 
 quiz = QuizBrain(question_bank)
 while quiz.still_has_questions():
-    correct_answer = quiz.question_list[quiz.question_number].answer
-    user_answer = quiz.next_question()
-    quiz.check_answer(user_answer, correct_answer)
+    quiz.next_question()
