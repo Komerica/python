@@ -46,6 +46,8 @@ def draw_shape(num_sides):
 
 for shape_side in range(3,11):
     tim.color(random.choice(colours))
+    tim.width(5)
+    tim.speed(5000)
     draw_shape(shape_side)
 
 screen = Screen()
