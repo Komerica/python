@@ -10,7 +10,8 @@
 # 360 / 10 = 36
 import turtle
 from turtle import Turtle, Screen
-from random import randint
+# from random import randint
+import random
 
 turtle.colormode(255) # generate random color
 tim = Turtle()
@@ -22,28 +23,30 @@ tim = Turtle()
 # Without any help #
 ####################
 
-for i in range(3,11):
-    degree = 360 / i
-    tim.color(randint(0, 255), randint(0, 255), randint(0, 255)) # generate random color
-    for _ in range(i):
-        tim.right(degree)
-        tim.forward(100)
+# for i in range(3,11):
+#     degree = 360 / i
+#     tim.color(randint(0, 255), randint(0, 255), randint(0, 255)) # generate random color
+#     for _ in range(i):
+#         tim.right(degree)
+#         tim.forward(100)
 
 
 ##############
 # Udemy code #
 ##############
+colours = ["aquamarine", "dark orange", "tan", "olive drab", "deep sky blue", "dim gray"]
 
 
-# def draw_shape(num_sides):
-#     degree = 360 / num_sides
-#     for _ in range(num_sides):
-#         tim.right(degree)
-#         tim.forward(100)
-#
-#
-# for num_side in range(3,11):
-#     draw_shape(num_side)
+def draw_shape(num_sides):
+    degree = 360 / num_sides
+    for _ in range(num_sides):
+        tim.right(degree)
+        tim.forward(100)
+
+
+for shape_side in range(3,11):
+    tim.color(random.choice(colours))
+    draw_shape(shape_side)
 
 screen = Screen()
 screen.exitonclick()
