@@ -1,5 +1,6 @@
 from turtle import Turtle
-from random import randint, randrange
+from random import randrange
+from scoreboard import ScoreBoard
 
 
 class Food(Turtle):
@@ -17,3 +18,4 @@ class Food(Turtle):
         random_x = randrange(-280, 280, 20)
         random_y = randrange(-280, 280, 20)
         self.goto(random_x, random_y)
+
