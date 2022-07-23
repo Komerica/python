@@ -19,3 +19,15 @@ with open("my_file.txt", mode="a") as file:
 # When mode="w" and if the file doesn't exist, it's going to create a new file for you.
 with open("new_file.txt", mode="w") as file:
     file.write("New text.")
+
+# Relative file path
+# : Relative to current working directory.
+with open("../../../../../Desktop/test.txt") as data:
+    contents = data.read()
+    print(contents)
+
+# Absolute file path
+# : Always relative to the root of your computer.
+with open(r"/Users/Jepil Lee/Desktop/test.txt") as data:
+    contents = data.read()
+    print(contents)
