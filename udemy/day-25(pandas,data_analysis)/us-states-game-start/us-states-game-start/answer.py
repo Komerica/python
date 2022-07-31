@@ -7,5 +7,5 @@ class Answer(Turtle):
         self.penup()
         self.hideturtle()
         self.goto(x, y)
-        self.write(f"{state}", font=('monaco', 12, 'bold'))
+        self.write(f"{state}", font=('monaco', 10, 'bold'))
 
