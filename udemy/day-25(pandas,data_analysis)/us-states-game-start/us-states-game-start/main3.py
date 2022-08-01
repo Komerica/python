@@ -1,6 +1,8 @@
 from turtle import Turtle, Screen
 import pandas
 
+
+
 screen = Screen()
 screen.bgcolor("black")
 image = "blank_states_img.gif"
