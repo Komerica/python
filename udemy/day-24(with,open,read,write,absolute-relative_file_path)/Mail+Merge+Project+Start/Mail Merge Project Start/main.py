@@ -50,7 +50,7 @@ with open("Input/Letters/starting_letter.txt") as letter_file:
 for name in names:
     new_name = name.replace("\n", "")
     print(new_name)
-    with open(f"Output/ReadyToSend/letter_for_{new_name}", mode="w") as new_letter:
+    with open(f"Output/ReadyToSend/letter_for_{new_name}.txt", mode="w") as new_letter:
         completed_letter = letter.replace(PLACEHOLDER, new_name)
         new_letter.write(completed_letter)
 
