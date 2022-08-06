@@ -1,7 +1,7 @@
 import os
 
 #############################
-# How to create new folders #
+# How to create new folders # (새폴더 만들기)
 #############################
 print(os.getcwd())
 path_parent = os.path.dirname(os.getcwd())
