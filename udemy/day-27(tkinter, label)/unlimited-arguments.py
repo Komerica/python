@@ -68,4 +68,11 @@ print(my_car.model_1)
 print(my_car.make1)     # kw.get("make") 의 장점은 instance를 만들때 값을 부여하지 않은 argument에 대해서 에러를 내지 않고 None을 출력함
 print(my_car.color)     # Skyline
 
-# Test
+
+# 🟪 *args + **kw
+def all_aboard(a, *args, **kw):
+    print(a, args, kw)
+
+
+all_aboard(4, 7, 3, 0, x=10, y=64)  # 4 (7, 3, 0) {'x': 10, 'y': 64}
+
