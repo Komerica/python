@@ -1,3 +1,4 @@
+# TKinter documentation: http://tcl.tk/man/tcl8.6/TkCmd/label.htm
 import tkinter
 
 # Tk() is like screen in Turtle!
