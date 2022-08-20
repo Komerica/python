@@ -18,11 +18,11 @@ pygame.display.set_caption("Nado Game")
 
 # 📍 배경 이미지 불러오기
 background = pygame.image.load(
-    "C:/Users/Jepil Lee/Desktop/projects/python/pygame_basic/background.png")
+    "/python_projects/pygame_basic/background.png")
 
 # 📍 캐릭터(스프라이트) 불러오기
 character = pygame.image.load(
-    "C:/Users/Jepil Lee/Desktop/projects/python/pygame_basic/character.png")
+    "/python_projects/pygame_basic/character.png")
 character_size = character.get_rect().size  # 이미지의 크기를 리스트형태로 구해옴
 character_width = character_size[0]  # 캐릭터의 가로크기
 character_height = character_size[1]  # 캐릭터의 세로크기
