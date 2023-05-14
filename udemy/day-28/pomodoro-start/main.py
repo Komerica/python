@@ -21,7 +21,12 @@ window.title("Pomodoro")
 # 🟢 Add padding
 window.config(padx=100, pady=50, bg=YELLOW)
 
-# 🟢 Set window size
+# 🟥 grid 1
+title_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50))
+title_label.grid(column=1, row=0)
+
+# 🟥 grid 2 ( include a pic, so use canvas(?) )
+# 🟢 Set canvas size
 #                                                 highlightthickness = the border line of canvas
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 
@@ -35,7 +40,21 @@ canvas.create_image(100, 112, image=tomato_img)
 #                  *args == unlimited positional arguments
 #                  **kw  == unlimited keyword arguments
 canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
+canvas.grid(column=1, row=1)
 
-canvas.pack()
+# 🟥 grid 3
+start_button = Button(text="Start", highlightthickness=0)
+start_button.grid(column=0, row=2)
+
+# 🟥 grid 4
+reset_button = Button(text="reset", highlightthickness=0)
+reset_button.grid(column=2, row=2)
+
+# 🟥 grid 5
+check_marks = Label(text="✔", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 20), highlightthickness=0)
+check_marks.grid(column=1, row=3)
+
+
+# canvas.pack()
 
 window.mainloop()
